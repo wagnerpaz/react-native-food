@@ -9,7 +9,7 @@ export default () => {
         searchApi('pasta');
     }, []);
 
-    const searchApi = async (term = searchTerm) => {
+    const searchApi = async (term) => {
         try {
             await setErrorMsg('');
             const response = await yelp.get('/businesses/search', {
